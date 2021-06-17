@@ -1,0 +1,19 @@
+<h1 id="tableLabel">Consultants</h1>
+<p *ngIf="!consultants"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="consultants">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let consultant of consultants">
+      <td>{{ consultant.firstName }}</td>
+      <td>{{ consultant.lastName }}</td>
+      <td>{{ consultant.email }}</td>
+    </tr>
+  </tbody>
+</table>
